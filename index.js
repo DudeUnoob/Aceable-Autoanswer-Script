@@ -6,7 +6,7 @@
 // @author       You
 // @match        https://driving.aceable.com/*
 // @icon         data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
-// @exclude      https://driving.aceable.com/acetest/*
+// @exclude      https://driving.aceable.com/acetest/test/*
 // @grant        none
 // ==/UserScript==
 
@@ -14,10 +14,11 @@ setInterval(() => {
 
  if(document.getElementById("arrow-next").disabled == false){
    document.getElementById("arrow-next").click()
+    document.querySelector(".vjs-mute-control").click()
  }
 
  if(document.querySelector(".vjs-big-play-button")){
-     console.log("lol")
+    
     document.querySelector(".vjs-big-play-button").click()
     }
 
