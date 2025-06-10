@@ -11,7 +11,16 @@
 // ==/UserScript==
 
 setInterval(() => {
-
+let video = document.querySelector("video.vjs-tech");
+ if (video) {
+  setTimeout(() => {
+    video.currentTime = video.duration;}, 200)
+ }
+ 
+if (document.querySelector(".grit.continue-learning-button")) {
+  document.querySelector(".grit.continue-learning-button").click();
+ }
+ 
  if(document.getElementById("arrow-next").disabled == false){
    document.getElementById("arrow-next").click()
     document.querySelector(".vjs-mute-control").click()
